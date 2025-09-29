@@ -15,6 +15,44 @@
         body{
             background-color: rgba(0, 0, 0, 0.849);
         }
+        #home {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+     @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #home > div {
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    .home a {
+      transition: all 0.5s ease;
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.096);
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .home a:hover {
+      color: purple;
+      background-color: white;
+    }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -71,23 +109,104 @@
         #home-logo{
             text-decoration: none;
         }
+        .item-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            height: 100vh
+        }
+        .item{
+            padding: 5rem;
+            border: black solid 1px;
+            border-radius: 2rem;
+            background-color: #ffffff7e;
+        }
+        .item h3{
+            color: white;
+        }
+        footer{
+            padding: 1.5rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
     </style>
 </head>
 <body>
-    <header> <!--Header-->
+    <header id="header"> <!--Header-->
         <div class="container">
             <div class="logo">
-                <h1><a href="#home" id="home-logo">Portfolio in ITEC 55</a></h1>
+                <h1><a href="#home" id="home-logo" onclick="home()">Portfolio in ITEC 55</a></h1>
                 <p>Compilation of School Works</p>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#project" onclick="project()" >Projects</a></li>
+                    <li><a href="#exam" onclick="exam()" >Examination</a></li>
+                    <li><a href="#activity" onclick="activity()" >Activities</a></li>
+                    <li><a href="#quiz" onclick="quiz()" >Quizzes</a></li>
                 </ul>
             </nav>
         </div>       
     </header>
+    <main>
+        <section id="home" class="home" style="background-color: black;">
+            <div>
+               <h1 style="color: white; font-size: 5rem;">Hello! I'm Kenneth Cedric V. Santilla</h1>
+               <h4 style="color: rgba(240, 248, 255, 0.767); font-size: 3rem;">Welcome To My Portfolio</h4>
+               <a href="#project" onclick="project()" style="font-size: 3rem;"><b>></b></a>
+            </div>
+        </section>
+        <section id="project" class="item-container">
+            <div id="item1" class="item">
+                <h3>Project#1</h3>
+            </div>
+            <div id="item2" class="item">
+                <h3>Project#2</h3>
+            </div>
+            <div id="item3" class="item">
+                <h3>Project#3</h3>
+            </div>
+        </section>
+        <section id="exam" class="item-container">
+            <div id="item4" class="item">
+                <h3>Examination#1</h3>
+            </div>
+            <div id="item5" class="item">
+                <h3>Examination#2</h3>
+            </div>
+            <div id="item6" class="item">
+                <h3>Examination#3</h3>
+            </div>
+        </section>
+        <section id="activity" class="item-container">
+            <div id="item7" class="item">
+                <h3>Activity#1</h3>
+            </div>
+            <div id="item8" class="item">
+                <h3>Activity#2</h3>
+            </div>
+            <div id="item9" class="item">
+                <h3>Activity#3</h3>
+            </div>
+        </section>
+        <section id="quiz" class="item-container">
+            <div id="item10" class="item">
+                <h3>Quiz#1</h3>
+            </div>
+            <div id="item11" class="item">
+                <h3>Quiz#2</h3>
+            </div>
+            <div id="item12" class="item">
+                <h3>Quiz#3</h3>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color:black; color: white;">
+        <h4>© 2025 Santilla</h4>
+    </footer>
+    <script src="dynamic.js"></script>
 </body>
 </html>
