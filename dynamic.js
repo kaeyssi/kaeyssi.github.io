@@ -6,6 +6,7 @@
     document.getElementById("quiz").style.display = "none";
 
 function home(){
+    document.getElementById("home").style.display = "";
     document.getElementById("header").style.display = "none";
     document.getElementById("project").style.display = "none";
     document.getElementById("exam").style.display = "none";
@@ -43,4 +44,5 @@ function quiz(){
     document.getElementById("exam").style.display = "none";
     document.getElementById("activity").style.display = "none";
     document.getElementById("quiz").style.display = "";
+
   }
